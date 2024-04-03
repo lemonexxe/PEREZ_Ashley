@@ -29,4 +29,9 @@ export class HomePage {
     // session variable 
     this.userName = localStorage.getItem('userName'); 
   }
+
+  logOut() {
+    this.router.navigate(['login']);
+    localStorage.removeItem('userName'); 
+  }
 }

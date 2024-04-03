@@ -14,22 +14,9 @@ export class DashboardPage implements OnInit {
   username: any;
   
   constructor(
-    private router : Router
   ) { }
 
   ngOnInit() {
-    
   }
-  
-
-  logOut() {
-    this.router.navigate(['login']);
-    localStorage.removeItem('userName'); 
-  }
-
-  async loadData() {
-    
-  }
-
   
 }

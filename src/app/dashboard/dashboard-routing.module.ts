@@ -11,12 +11,12 @@ const routes: Routes = [
       {
         path: 'home',
         loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+      },
+      {
+        path: 'calculator',
+        loadChildren: () => import('./calculator/calculator.module').then( m => m.CalculatorPageModule)
       }
     ]
-  },
-  {
-    path: 'calculator',
-    loadChildren: () => import('./calculator/calculator.module').then( m => m.CalculatorPageModule)
   },
 ];
 

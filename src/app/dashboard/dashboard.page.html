@@ -7,19 +7,28 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">dashboard</ion-title>
+      <ion-title size="large"> Hello, {{username}}</ion-title>
     </ion-toolbar>
   </ion-header>
 
+
+
 <ion-tabs>
+  <!-- home -->
   <ion-tab-bar slot = "bottom">
     <ion-tab-button tab = "home">
-      <ion-icon name = "home">
+      <ion-icon name = "home"></ion-icon>
         <ion-label> HOME </ion-label>
-      </ion-icon>
+    </ion-tab-button>
+
+  <!-- calculator -->
+    <ion-tab-button tab = "calculator">
+      <ion-icon name = "calculator"></ion-icon>
+        <ion-label> CALCULATOR </ion-label>
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>
+
 
 <ion-fab id = "fab" vertical = "bottom" horizontal = "end">
   <ion-fab-button>
@@ -36,4 +45,9 @@
     </ion-fab-button>
   </ion-fab-list>
 </ion-fab>
+<ion-button 
+  outline item-end
+  (click) = "logOut()">
+      LOG OUT
+</ion-button>
 </ion-content>

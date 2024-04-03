@@ -13,11 +13,19 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div id = "container">
+    <ion-card id = "card">
+      <ion-card-header>
+        <ion-card-title style = "text-align: center;"> UNIVERSITIES IN TURKEY </ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  
+    <ion-list [inset] = "true">
+      <ion-item *ngFor = "let turkU of turkU">
+        <ion-label> {{turkU.name}}</ion-label>
+      </ion-item>
+    </ion-list>
   </div>
 
-  ajsdfajdlkjakld sample
   
 </ion-content>

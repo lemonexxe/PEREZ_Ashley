@@ -4,12 +4,85 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">calculator</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-item>
+    <ion-text> {{display}} </ion-text>
+  </ion-item>
+  <ion-label> HISTORY </ion-label>
 
-  test calcu 
+  <ion-item>
+    <ion-text color = "medium"> {{history}} </ion-text>
+  </ion-item>
+
+  <ion-grid>
+    <ion-row>
+      <!-- 7 -->
+      <ion-col>
+        <ion-button fill = "outline" (click) = "getAns($event)"> 7 </ion-button> 
+      </ion-col>
+      <!-- 8 -->
+      <ion-col>
+        <ion-button fill = "outline" (click) = "getAns($event)"> 8 </ion-button>
+      </ion-col>
+      <!-- 9 -->
+      <ion-col>
+        <ion-button fill = "outline" (click) = "getAns($event)"> 9 </ion-button>
+      </ion-col>
+      <!-- operator: divide / -->
+      <ion-col>
+        <ion-button (click) = "perfOp($event)"> / </ion-button>
+      </ion-col>
+      <!-- 4 -->
+      <ion-col>
+        <ion-button fill = "outline" (click) = "getAns($event)"> 4 </ion-button>
+      </ion-col>
+      <!-- 5 -->
+      <ion-col>
+        <ion-button fill = "outline" (click) = "getAns($event)"> 5 </ion-button>
+      </ion-col>
+      <!-- 6 -->
+      <ion-col>
+        <ion-button fill = "outline" (click) = "getAns($event)"> 6 </ion-button>
+      </ion-col>
+      <!-- operator: multiplication * -->
+      <ion-col>
+        <ion-button (click) = "perfOp($event)"> * </ion-button>
+      </ion-col>
+      <!-- 3 -->
+      <ion-col>
+        <ion-button fill = "outline" (click) = "getAns($event)"> 3 </ion-button>
+      </ion-col>
+      <!-- 2 -->
+      <ion-col>
+        <ion-button fill = "outline" (click) = "getAns($event)"> 2 </ion-button>
+      </ion-col>
+      <!-- 1 -->
+      <ion-col>
+        <ion-button fill = "outline" (click) = "getAns($event)"> 1 </ion-button>
+      </ion-col>
+      <!-- operator: subtraction - -->
+      <ion-col>
+        <ion-button (click) = "perfOp($event)"> - </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <!-- 0 -->
+      <ion-col>
+        <ion-button fill = "outline" (click) = "getAns($event)"> 0 </ion-button>
+      </ion-col>
+      <!-- clear - -->
+      <ion-col>
+        <ion-button (click) = "clear($event)"> C </ion-button>
+      </ion-col>
+      <!-- equals - -->
+      <ion-col>
+        <ion-button (click) = "equals($event)"> = </ion-button>
+      </ion-col>
+      <!-- operator: addition + -->
+      <ion-col>
+        <ion-button (click) = "perfOp($event)"> + </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

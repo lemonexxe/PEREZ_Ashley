@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Chrono';
+    src: url('../login/fonts/Chrono.ttf') format('truetype');
+
+}
+
+
+
+.custom-center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100%; /* Fill the height of the parent container */
+    background-image: url('../login/images/1.jpg');
+    background-size: cover;
+  
+    .input {
+      width: 75%; /* Adjust width as needed */
+      max-width: 500px; /* Limit maximum width */
+      margin-bottom: 10px; /* Adjust spacing between inputs */
+    }
+  
+    ion-button {
+      width: 75%; /* Adjust width as needed */
+      max-width: 500px; /* Limit maximum width */
+      margin-bottom: 10px; /* Adjust spacing between buttons */
+    }
+
+    ion-header {
+        margin-bottom: 0px; /* Adjust margin as needed */
+        text-align: center;
+          
+        background-color: rgba(255, 7, 160, 0.212);
+
+      }
+  
+    
+
+    ion-title {
+        text-align: center; /* Center the text horizontally */
+        width: 100%; /* Ensure the title takes up the full width */
+        font-size: 50px;
+        font-family:  chrono;
+      }
+    
+}

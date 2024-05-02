@@ -1,0 +1,12 @@
+<ion-content class="ion-padding custom-center-content">
+  <ion-header>
+      <ion-title>LOG-IN</ion-title>
+  </ion-header>
+
+  <div class="custom-center-content"> <!-- Added container to center vertically -->
+    <ion-input label="email" label-placement="floating" fill="solid" type="text" [(ngModel)]="email" class="input"></ion-input>
+    <ion-input label="password" label-placement="floating" fill="solid" type="password" [(ngModel)]="password" class="input"></ion-input>
+    <ion-button expand="block" (click)="login()">Log-In</ion-button>
+    <ion-button expand="block" (click)="goToSignUp()">Create Account?</ion-button>
+  </div>
+</ion-content>

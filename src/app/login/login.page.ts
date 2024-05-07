@@ -5,6 +5,7 @@ import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -17,7 +18,7 @@ export class LoginPage implements OnInit {
 
  
 
-  constructor(private authService: AuthService, private router: Router, private alertController: AlertController) { }
+  constructor(private authService: AuthService, private router: Router, private alertController: AlertController) { localStorage.setItem("Login", "false")}
     login() {
       const auth = getAuth();
       signInWithEmailAndPassword(auth, this.email, this.password)

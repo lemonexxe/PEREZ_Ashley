@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router) { localStorage.setItem("loggedIn", "false") }
   setAuthentication(auth:boolean) {
     if (auth) {
       localStorage.setItem("loggedIn", "true");
@@ -18,6 +18,8 @@ export class AuthService {
     }
 
     this.router.navigate(['login']);
-    return false;
+    return ;
   }
+  
+  
 }

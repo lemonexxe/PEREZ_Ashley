@@ -1,64 +1,31 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Dashboard</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-  <div class="bgkoto">
-
- 
-    <img src="../../assets/images/profiles.png" alt="Description of the image" class="small-image">
-  
-
-  
-
-      <div class="box">
-     <div class="box1">
-      
-    
-        <h3>ZUNIGA, BILL KIRBY L.</h3> 
-        <p>Computer Geek.<br>
-          
-          HOBBIES: Photograpy, Travel, Cosplay
-          <br>
-          LIKES: Listening to music(city pop & 2nd gen k-pop), Late night walks
-          <br>
-          TALENT:Playing Piano & Guitar
-          <br>
-          SKILLS:Repairing/Troubleshooting (cellphones, Laptop, Desktop) 
-          
-          <br></p>
-         <h2>HOW DO YOU SEE YOURSELF IN 5 YRS?  </h2>
-          <p>
-          I have to be in any company as an IT staff having a regular salary as much as possible.
-          
-          </p>
-          
-          <h2>STRENGTHS:</h2>
-          <p>
-            <li> Calm</li>
-            <li> Creative </li>
-            <li> Cooperative </li>
-            <li> Problem Solving </li>
-            
-            <h2>WEAKNESS:</h2>
-          <p>
-            <li>Time Management </li>
-            <li>  Coding </li>
-            <li>Impatient </li>
-            <li>Procastinator</li>
-          </p>
-          <h2>MOTTO</h2>
-          <p> If it works, it ain't stupid.</p>
-          <h2>LOVE LANGUAGE MO? BAKIT?</h2>
-          <p> Acts of service/Physical touch 
-baket? ewan wala akong jowa HAHAHAHAHHA
-          </p>
-          <h2>KUNG PAGKAIN KA ANO KA? BAKIT?</h2>
-          <p> Lugaw (pipiliin lang pag walang choice HAHAHAHAHAHA)
-          </p>
-          <h2>PET PEEVE</h2>
-          <p> Loud noises
-          </p>
-
-        </div>
-      
-          
-  </div>
+<div id="container">
+  <h1><strong>Recommended Netflix movies</strong></h1>
+  <div class="display" *ngFor="let user of userList">
+    <div class="display1">
+      <div class="list">
+        <h2>Title: {{user.title}} </h2>
+        <h2>Writer: {{user.Writer}} </h2>
+        <h2>Genre: {{user.genres}} </h2>
+        <h2>Released Date: {{user.releaseDate}}</h2>
+        <h2>Rated: {{user.isRated}} </h2>
+        
+      </div>
+      <div class="button1">
+        <ion-button color="success" (click)="update(user)"><ion-icon name="create-sharp"></ion-icon></ion-button>
+        <ion-button color="danger" (click)="delete(user)"><ion-icon name="close-circle-sharp"*ngIf="user.id"></ion-icon></ion-button>
+      </div>
     </div>
-
+  </div>
+  <div class="button2">
+  <ion-button (click)="addUser()"><ion-icon name="person-add-sharp" class="buttonz"></ion-icon></ion-button>
+  <ion-button (click)="logOut()"><ion-icon name="log-out-sharp" class="buttonz"></ion-icon></ion-button>
+</div>
+</div>
+</ion-content>

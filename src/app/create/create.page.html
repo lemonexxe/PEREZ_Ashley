@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Create</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+    <h1>Recommend Movies</h1>
+    <ion-item>
+      <ion-label position="floating">Title</ion-label>
+      <ion-input type="text" [(ngModel)]="users.title" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Writer</ion-label>
+      <ion-input type="text" [(ngModel)]="users.Writer" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="Genre" multiple="true" [(ngModel)]="users.genres">
+        <ion-select-option *ngFor="let genre of genres" [value]="genre">{{ genre }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Released Date</ion-label>
+      <input type="date" [(ngModel)]="users.releaseDate">
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="Rated 18?" interface="popover" placeholder="Select" [(ngModel)]="users.isRated">
+        <ion-select-option value="true">Yes</ion-select-option>
+        <ion-select-option value="false">No</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+  <div class="nav">
+    <ion-button (click)="createUser()">Create</ion-button>
+    <ion-button (click)="home()"><ion-icon name="home-sharp"></ion-icon></ion-button>
+  </div>
+  </div>
+</ion-content>

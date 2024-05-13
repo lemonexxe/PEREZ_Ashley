@@ -25,3 +25,4 @@ import { environment } from 'src/environments/environment';
 export class AppModule {
   app = initializeApp(environment.firebaseConfig);
 }
+

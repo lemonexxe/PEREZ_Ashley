@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
-import { Router } from '@angular/router';
-
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { AuthenticationService } from '../authentication.service';
 
 @Component({
   selector: 'app-signup',
@@ -10,60 +7,21 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
   styleUrls: ['./signup.page.scss'],
 })
 export class SignupPage implements OnInit {
+
   email: string = '';
   password: string = '';
-  reTypePassword: string = '';
+  confirmPassword: string = '';
 
-  constructor(private alertController: AlertController, private router: Router) { }
+  constructor(private auth: AuthenticationService) { }
 
-  
-  
-  
   ngOnInit() {
   }
 
-  async signUp() {
-    if (!this.email || !this.password || !this.reTypePassword) {
-      this.presentAlert('Error', 'Please fill all the fields.');
-      return;
-    }
-
-    if (this.password !== this.reTypePassword) {
-      this.presentAlert('Error', 'Password do not match.');
-      return;
-    }
-    
-    const auth = getAuth();
-    createUserWithEmailAndPassword(auth, this.email, this.password)
-      .then((userCredential) => {
-
-        const user = userCredential.user;
-        this.presentAlert('Success', 'Sign-Up Successfully!');
-        this.router.navigate(['login']);
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.error(error);
-    });
-
+  signup() {
+    this.auth.signup(this.email, this.password, this.confirmPassword);
     this.email = '';
     this.password = '';
-    this.reTypePassword = '';
-    
+    this.confirmPassword = '';
   }
 
-  goToLogin() {
-    this.router.navigate(['login']);
-  }
-
-  async presentAlert(header: string, message: string) {
-    const alert = await this.alertController.create({
-      header: header,
-      message: message,
-      buttons: ['OK']
-    });
-
-    await alert.present();
-  }
 }

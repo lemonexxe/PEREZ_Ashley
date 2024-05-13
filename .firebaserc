@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "act9-26d13"
-  }
+    "default": "act10-2dcf8",
+    "act10": "act10-2dcf8"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }

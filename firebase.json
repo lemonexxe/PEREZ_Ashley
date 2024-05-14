@@ -3,13 +3,13 @@
     "public": "www",
     "ignore": [
       "firebase.json",
-      "*/.",
-      "*/node_modules/*"
+      "**/.*",
+      "**/node_modules/**"
     ],
     "rewrites": [
       {
         "source": "**",
-        "destination": "https://act9-26d13.web.app"
+        "destination": "/index.html"
       }
     ]
   },

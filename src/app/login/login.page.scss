@@ -1,8 +1,6 @@
-@font-face {
-    font-family: 'Chrono';
-    src: url('../login/fonts/Chrono.ttf') format('truetype');
 
-}
+
+
 
 
 
@@ -14,24 +12,29 @@
     height: 100%; /* Fill the height of the parent container */
     background-image: url('../../assets/images/1.jpg');
     background-size: cover;
+    height: 100vh;
+    
   
     .input {
       width: 75%; /* Adjust width as needed */
       max-width: 500px; /* Limit maximum width */
       margin-bottom: 10px; /* Adjust spacing between inputs */
+      display:flex;
     }
   
     ion-button {
       width: 75%; /* Adjust width as needed */
       max-width: 500px; /* Limit maximum width */
       margin-bottom: 10px; /* Adjust spacing between buttons */
+      display:flex;
     }
 
     ion-header {
         margin-bottom: 0px; /* Adjust margin as needed */
         text-align: center;
+        display:flex;
           
-        background-color: rgba(255, 7, 160, 0.212);
+ 
 
       }
   
@@ -41,7 +44,9 @@
         text-align: center; /* Center the text horizontally */
         width: 100%; /* Ensure the title takes up the full width */
         font-size: 50px;
-        font-family:  chrono;
+     
       }
-    
+      
+  
+
 }

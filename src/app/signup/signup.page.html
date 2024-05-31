@@ -2,13 +2,15 @@
   <ion-header>
       <ion-title>SIGN-UP</ion-title>
   </ion-header>
+
+
   <div class="custom-center-content">
     
   <ion-input label="email" label-placement="floating" fill="solid" type="text" [(ngModel)]="email" class="input"></ion-input>
   <ion-input label="password" label-placement="floating" fill="solid" type="password" [(ngModel)]="password" class="input"></ion-input>
-  <ion-input label="reType password" label-placement="floating" fill="solid" type="password" [(ngModel)]="reTypePassword" class="input"></ion-input>
+  <ion-input label="re-Type password" label-placement="floating" fill="solid" type="password" [(ngModel)]="reTypePassword" class="input"></ion-input>
   <ion-button expand="block" (click)="signUp()">Sign-Up</ion-button>
   <ion-button expand="block" (click)="goToLogin()">Already have an account?</ion-button>
+</div>
 
-  </div>
 </ion-content>

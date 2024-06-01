@@ -1,14 +1,12 @@
-@font-face {
-  font-family: newfont;
-  src: url(../assets/fonts/OldNewspaperTypes.ttf);
-}
+
 
 
 #container {
-  font-family: newfont;
-  background-color: black;
-  background-size: cover;
+
+  background-image: url("../../assets/images/2.jpg");
   background-repeat: no-repeat;
+ /* Adjusts the background size to cover the container */
+  background-position: center; /* Centers the background image */
   width: 100vw;
   height: 100vh;
   overflow: scroll;
@@ -16,21 +14,44 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  background-color: #7a41008c;
 }
 
 h1 {
-  font-family: newfont;
+  
+  font-size: 50px;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #000000;
+  margin-left: 380px;
+  text-shadow: #d80000;
+  transform: translateX(-50%);
+  z-index: 1; 
+}
+
+.menu {
+
   font-size: 80px;
   text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
-  color: #f0f0f0;
-  margin-left: 950px;
+  color: #000000;
+  margin-left: 580px;
   text-shadow: #d80000;
-  outline: #d80000;
-  outline-width: 8px;
-  border-radius: 5px;
-  outline-style: dashed;
-  outline-style: inset;
+  transform: translateX(-50%);
+  z-index: 1; 
+}
+
+.menu1 {
+
+  font-size: 30px;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #000000;
+  float: left;
+  display: flex;
+  
+  text-shadow: #d80000;
   transform: translateX(-50%);
   z-index: 1; 
 }
@@ -41,7 +62,7 @@ h1 {
 }
 
 .display1 {
-  font-family: newfont;
+
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -54,9 +75,9 @@ h1 {
 }
 
 h2{
-  font-family: newfont;
+ 
   margin: 0;
-  color: #ffffff;
+  color: #000000;
   font-size: 1rem;
 }
 
@@ -65,7 +86,7 @@ h2{
 }
 
 .button{
-  --ion-color-primary: #d80000;
+  --ion-color-primary: #006d0f;
 }
 
 .buttonz{

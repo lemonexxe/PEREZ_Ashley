@@ -125,11 +125,10 @@ export class AuthenticationService {
 
     try {
       const docID = await addDoc(collection(firestore, "users"), {
-        title: user.title,
-        Writer: user.Writer,
-        releaseDate: user.releaseDate,
-        isRated: user.isRated,
-        genres: user.genres
+        MainDish: user.main,
+        SideDish: user.side,
+        preferred: user.preferred,
+        Drinks: user.Drinks
       });
       console.log("Document with ID: ", docID.id);
     } catch (e) {
@@ -155,7 +154,7 @@ export class AuthenticationService {
 
     try {
       const docRef = doc(firestore, "users", user.id);
-      await updateDoc(docRef, { title: user.title, artist: user.Writer, releaseDate: user.releaseDate, genres: user.genres, isExplicit: user.isRated });
+      await updateDoc(docRef, { Maindish: user.main, SideDish: user.side,  Drinks: user.Drinks, preferred: user.preferred });
     } catch (e) {
       console.error("Error update document: ", e);
     }

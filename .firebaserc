@@ -1,7 +1,7 @@
 {
   "projects": {
-    "default": "act10-5472c",
-    "act10": "act10-5472c"
+    "default": "perez-act-10",
+    "perezact10": "perez-act-10"
   },
   "targets": {},
   "etags": {},

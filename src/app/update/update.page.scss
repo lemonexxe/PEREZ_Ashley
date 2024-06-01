@@ -1,7 +1,4 @@
-@font-face {
-  font-family: newfont;
-  src: url(../assets/fonts/OldNewspaperTypes.ttf);
-}
+
 
 .container {
   font-family: newfont;
@@ -14,7 +11,7 @@
   }
   
   ion-content {
-    font-family: newfont;
+
     --background: #f0f0f0;
   }
   
@@ -25,7 +22,7 @@
   }
   
   ion-item {
-    font-family: newfont;
+ 
     --inner-padding-end: 10px;
     --inner-padding-start: 10px;
     --background: #ffffff;
@@ -34,13 +31,13 @@
   }
   
   ion-item ion-input {
-    border-bottom: 2px solid #d80000;
+    border-bottom: 2px solid #009614;
     padding: 5px 10px;
     font-size: 1rem;
   }
   
   ion-item ion-select {
-    border-bottom: 2px solid #d80000;
+    border-bottom: 2px solid #009614;
     padding: 5px 10px;
     font-size: 1rem;
   }
@@ -51,7 +48,7 @@
   }
   
   .button {
-    font-family: newfont;
-    --ion-color-primary: #d80000;
+
+    --ion-color-primary: #009614;
   }
   

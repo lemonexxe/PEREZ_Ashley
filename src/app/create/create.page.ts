@@ -11,9 +11,8 @@ import { User } from '../home/home.model';
 export class CreatePage implements OnInit {
 
   users: User = new User();
-  genres: string[] = [
-    'Action', 'Horror', 'Thriller', 'Drama', 'Sci-fi', 'Romance', 'Comedy', 'Fantasy', 'Crime', 'Animation',
-    'Adventure', 'Western'  ];
+  Drinks: string[] = [
+    'Water', 'Coke', 'Sprite', 'Royal', 'Pineapple juice', 'Lemonade', 'red tea' ];
 
   constructor(private auth: AuthenticationService, private router: Router) { }
 
@@ -21,7 +20,7 @@ export class CreatePage implements OnInit {
     if (this.validation()) {
       if (!this.users.id) {
         this.auth.addUser(this.users);
-        this.auth.presentAlert('Success', 'Movie added successfully!')
+        this.auth.presentAlert('Success', 'Orders added successfully!')
       }
       this.users = new User();
       this.router.navigate(['home']);
@@ -31,30 +30,25 @@ export class CreatePage implements OnInit {
   home() {
     this.router.navigate(['home']);
   }
-
   validation() {
-    if (!this.users.title) {
-      this.auth.presentToast('Please fill in the Title.', 3000);
+    if (!this.users.main) {
+      this.auth.presentToast('Please fill in the Main Dish.', 3000);
       return false;
     }
-    if (!this.users.Writer) {
-      this.auth.presentToast('Please fill in the Writer.', 3000);
+    if (!this.users.side) {
+      this.auth.presentToast('Please fill in the Side dish.', 3000);
       return false;
     }
-
-    if (!this.users.releaseDate) {
-      this.auth.presentToast('Please fill in the Released Date.', 3000);
+    if (!this.users.preferred) {
+      this.auth.presentToast('Please fill in the preferred place.', 3000);
       return false;
     }
-    if (!this.users.isRated) {
-      this.auth.presentToast('Please fill in the Rated.', 3000);
+    if (!this.users.Drinks) {
+      this.auth.presentToast('Please fill in the Drinks.', 3000);
       return false;
     }
-    if (!this.users.genres) {
-      this.auth.presentToast('Please fill in the Genre', 3000);
-      return false;
-    }
-    return true;
+    return true; // Return true if all validations pass
+  
   }
 
   ngOnInit() {

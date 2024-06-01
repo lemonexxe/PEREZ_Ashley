@@ -13,9 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm ci && npm rub build
+      - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ACT10_5472C }}
-          projectId: act10-5472c
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PEREZ_ACT_10 }}
+          projectId: perez-act-10

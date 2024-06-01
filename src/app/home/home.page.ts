@@ -43,7 +43,7 @@ export class HomePage {
   }
 
   async delete(user: User) {
-    const confirmDelete = confirm('Are you sure you want to delete this Movie?');
+    const confirmDelete = confirm('Are you sure you want to delete this Order?');
   
     if (!confirmDelete) {
       return; 
@@ -51,7 +51,7 @@ export class HomePage {
   
     this.auth.isLoading = true;
     await this.auth.deleteUser(user);
-    this.auth.presentAlert('Success', 'Movie deleted successfully!');
+    this.auth.presentAlert('Success', 'Order deleted successfully!');
     this.user();
     this.users = new User();
     this.auth.isLoading = false;

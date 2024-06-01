@@ -7,32 +7,27 @@
 
 <ion-content [fullscreen]="true">
   <div class="container">
-    <h1>Update a Movie</h1>
+    <h1>Update orders</h1>
     <ion-item>
-      <ion-label position="floating">Title</ion-label>
-      <ion-input type="text" [(ngModel)]="users.title" required></ion-input>
+      <ion-label position="floating">Main Dish</ion-label>
+      <ion-input type="text" [(ngModel)]="users.main" required></ion-input>
     </ion-item>
     
     <ion-item>
-      <ion-label position="floating">Writer</ion-label>
-      <ion-input type="text" [(ngModel)]="users.Writer" required></ion-input>
+      <ion-label position="floating">Side dish</ion-label>
+      <ion-input type="text" [(ngModel)]="users.side" required></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label>Released Date</ion-label>
-      <input type="date" [(ngModel)]="users.releaseDate">
-    </ion-item>
-
-    <ion-item>
-      <ion-select label="Rated18" interface="popover" placeholder="Select" [(ngModel)]="users.isRated">
+      <ion-select label="preferred" interface="popover" placeholder="Select" [(ngModel)]="users.preferred">
         <ion-select-option value="true">Yes</ion-select-option>
         <ion-select-option value="false">No</ion-select-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
-      <ion-select label="Genre" multiple="true" [(ngModel)]="users.genres">
-        <ion-select-option *ngFor="let genre of genres" [value]="genre">{{ genre }}</ion-select-option>
+      <ion-select label="Drinks" multiple="true" [(ngModel)]="users.Drinks">
+        <ion-select-option *ngFor="let Drinks of Drinks" [value]="Drinks">{{ Drinks }}</ion-select-option>
       </ion-select>
     </ion-item>
 

@@ -13,9 +13,8 @@ export class UpdatePage implements OnInit {
   users: User = new User();
   id: any;
 
-  genres: string[] = [
-    'Action', 'Horror', 'Thriller', 'Drama', 'Sci-fi', 'Romance', 'Comedy', 'Fantasy', 'Crime', 'Animation',
-    'Adventure', 'Western'  ];
+  Drinks: string[] = [
+    'Water', 'Coke', 'Sprite', 'Royal', 'Pineapple juice', 'Lemonade', 'red tea' ];
 
   constructor(private route: ActivatedRoute, private auth: AuthenticationService, private router: Router) { }
 
@@ -28,7 +27,7 @@ export class UpdatePage implements OnInit {
     if (this.validation()) {
       if (this.users.id) {
         this.auth.updateUser(this.users);
-        this.auth.presentAlert('Success', 'Movie updated successfully!')
+        this.auth.presentAlert('Success', 'Orders updated successfully!')
       }
       this.users = new User();
       this.router.navigate(['home']);
@@ -40,25 +39,21 @@ export class UpdatePage implements OnInit {
   }
 
   validation() {
-    if (!this.users.title) {
-      this.auth.presentToast('Please fill in the Title.', 3000);
+    if (!this.users.main) {
+      this.auth.presentToast('Please fill in the Main Dish.', 3000);
       return false;
     }
-    if (!this.users.Writer) {
-      this.auth.presentToast('Please fill in the Artist.', 3000);
+    if (!this.users.side) {
+      this.auth.presentToast('Please fill in the Side dish.', 3000);
       return false;
     }
   
-    if (!this.users.releaseDate) {
-      this.auth.presentToast('Please fill in the Released Date.', 3000);
+    if (!this.users.preferred) {
+      this.auth.presentToast('Please fill in the preferred place.', 3000);
       return false;
     }
-    if (!this.users.isRated) {
-      this.auth.presentToast('Please fill in the Rated.', 3000);
-      return false;
-    }
-    if (!this.users.genres) {
-      this.auth.presentToast('Please fill in the Genre.', 3000);
+    if (!this.users.Drinks) {
+      this.auth.presentToast('Please fill in the Drinks.', 3000);
       return false;
     }
     return true;
@@ -68,11 +63,10 @@ export class UpdatePage implements OnInit {
     users.forEach(user => {
       if (this.id == user.id) {
         this.users.id = user.id;
-        this.users.title = user.title;
-        this.users.Writer = user.Writer;
-        this.users.releaseDate = user.releaseDate;
-        this.users.genres = user.genres;
-        this.users.isRated = user.isRated;
+        this.users.main = user.main;
+        this.users.side = user.side;
+        this.users.Drinks = user.Drinks;
+        this.users.preferred = user.preferred;
       }
     });
   }

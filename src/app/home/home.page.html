@@ -1,4 +1,4 @@
-<ion-content [fullscreen]="true">
+<ion-content class="ion-padding custom-center-content custom-background">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Dashboard</ion-title>
@@ -6,15 +6,20 @@
   </ion-header>
 
 <div id="container">
-  <h1><strong>Recommended Nyekflix movies</strong></h1>
+  <div class="menu">
+  <p>TODAYS MENU</p>
+</div>
+<div class="menu1">
+<p></p>
+</div>
+  <h1><strong>List your orders</strong></h1>
   <div class="display" *ngFor="let user of userList">
     <div class="display1">
       <div class="list">
-        <h2>Title: {{user.title}} </h2>
-        <h2>Writer: {{user.Writer}} </h2>
-        <h2>Genre: {{user.genres}} </h2>
-        <h2>Released Date: {{user.releaseDate}}</h2>
-        <h2>Rated: {{user.isRated}} </h2>
+        <h2>MainDish: {{user.main}} </h2>
+        <h2>SideDish: {{user.side}} </h2>
+        <h2>Drinks: {{user.Drinks}} </h2>
+        <h2>preferred: {{user.preferred}} </h2>
         
       </div>
       <div class="button1">

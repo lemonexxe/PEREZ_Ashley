@@ -2,30 +2,27 @@
 
 export class User {
     id: string;
-    title: string;
-    Writer: string;
-    genres: string[] = [];
-    releaseDate: Date;
-    isRated: boolean = false;
+    main: string;
+    side: string;
+    Drinks: string[] = [];
+    preferred: boolean = false;
    
     
-    constructor(id: string = '', title: string = '', artist: string = '', streams: number = 0, releaseDate: Date = new Date(), isRated: boolean = false, genres: string[] = []) {
+    constructor(id: string = '', main: string = '', side: string = '', preferred: boolean = false, Drinks: string[] = []) {
         this.id = id;
-        this.title = title;
-        this.Writer = artist;
-        this.genres = genres;
-        this.releaseDate = releaseDate;
-        this.isRated = isRated;
+        this.main = main;
+        this.side = side;
+        this.Drinks = Drinks;
+        this.preferred = preferred;
      
     }
 }
 
 export interface iUser {
     id: string;
-    title: string;
-    Writer: string;
-    genres: string[]
-    releaseDate: Date;
-    isRated: boolean;
+    main: string;
+    side: string;
+    Drinks: string[]
+    preferred: boolean;
     
 }

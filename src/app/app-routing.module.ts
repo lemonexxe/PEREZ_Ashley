@@ -5,7 +5,7 @@ import { AuthenticationService } from './authentication.service';
 const routes: Routes = [
   {
     path: 'home',
-    // canActivate: [AuthenticationService],
+    canActivate: [AuthenticationService],
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
@@ -23,7 +23,7 @@ const routes: Routes = [
   },
   {
     path: 'create',
-    // canActivate: [AuthenticationService],
+    canActivate: [AuthenticationService],
     loadChildren: () => import('./create/create.module').then( m => m.CreatePageModule)
   },
   {
